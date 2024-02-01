@@ -374,21 +374,112 @@
 // ];
 // console.log(display(arr, 4, 4));
 
-var transpose = function (matrix) {
-  let str = [];
-  for (let i = 0; i < matrix.length; i++) {
-    for (j = 0; j < matrix.length; j++) {
-      str += matrix[j][i] + " ";
+// var transpose = function (matrix) {
+//   let str = [];
+//   for (let i = 0; i < matrix.length; i++) {
+//     for (j = 0; j < matrix.length; j++) {
+//       str += matrix[j][i] + " ";
+//     }
+//   }
+//   return str;
+// };
+
+// console.log(
+//   transpose([
+//     [1, 2, 3],
+//     [4, 5, 6],
+//   ])
+// );
+
+// Merge two sorted arrays
+
+// var maxProfit = function (prices) {
+//   let currMin = prices[0];
+//   let profit = 0;
+
+//   for (let i = 1; i < prices.length; i++) {
+//     if (prices[i] < currMin) {
+//       currMin = prices[i];
+//     }
+
+//     if (prices[i] > currMin) {
+//       profit = Math.max(profit, prices[i] - currMin);
+//     }
+//   }
+//   return profit;
+// };
+
+// console.log(maxProfit([7, 1, 5, 3, 6, 4]));
+
+// var twoSum = function (nums, target) {
+//   let i = nums[i];
+//   let j = nums.length - 1;
+
+//   while (i <= j) {
+//     if (nums[i] + nums[j] === target) {
+//       return nums.indexOf(nums[i], nums[j]);
+//     } else {
+//       i++;
+//       j++;
+//     }
+//   }
+// };
+
+// console.log(twoSum([2, 7, 11, 15], 9));
+
+// function createNode(value) {
+//   return {
+//     data: value,
+//     next: null,
+//   };
+// }
+
+// function display(head) {
+//   let temp = head;
+
+//   while (temp != null) {
+//     console.log(temp.data);
+//     temp = temp.next;
+//   }
+// }
+
+// function addAtHead(head, data) {
+//   let newNode = createNode(data);
+//   newNode.next = head;
+//   head = newNode;
+//   return newNode;
+// }
+
+// function addAtTail(head, data) {
+//   let temp = head;
+//   while (temp.next != null) {
+//     temp = temp.next;
+//   }
+
+//   let newNode = createNode(data);
+//   temp.next = newNode;
+//   return head;
+// }
+
+// let head = null;
+
+// head = addAtHead(head, 10);
+// head = addAtHead(head, 20);
+// head = addAtTail(head, 70);
+// head = addAtHead(head, 30);
+// head = addAtHead(head, 40);
+// head = addAtHead(head, 50);
+// head = addAtHead(head, 60);
+
+// display(head);
+
+var largestOddNumber = nums => {
+  for (let i = nums.length - 1; i >= 0; i--) {
+    if (+nums[i] % 2 !== 0) {
+      return nums.slice(0, i + 1);
     }
   }
-  return str;
+  return "";
 };
 
-console.log(
-  transpose([
-    [1, 2, 3],
-    [4, 5, 6],
-  ])
-);
-
-// Hello world
+console.log(largestOddNumber("374585"));
