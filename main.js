@@ -473,13 +473,28 @@
 
 // display(head);
 
-var largestOddNumber = nums => {
-  for (let i = nums.length - 1; i >= 0; i--) {
-    if (+nums[i] % 2 !== 0) {
-      return nums.slice(0, i + 1);
-    }
-  }
-  return "";
+// var largestOddNumber = nums => {
+//   for (let i = nums.length - 1; i >= 0; i--) {
+//     if (+nums[i] % 2 !== 0) {
+//       return nums.slice(0, i + 1);
+//     }
+//   }
+//   return "";
+// };
+
+// console.log(largestOddNumber("374585"));
+
+// const employeesDetail = {
+//   eid: 101,
+//   ename: "Random",
+// };
+
+// console.log(JSON.stringify(employeesDetail));
+
+const callApi = async () => {
+  const data = await fetch("https://dummyjson.com/products");
+  const json = await data.json();
+  console.log(json);
 };
 
-console.log(largestOddNumber("374585"));
+callApi();
