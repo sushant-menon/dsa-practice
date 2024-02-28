@@ -491,18 +491,16 @@
 
 // console.log(JSON.stringify(employeesDetail));
 
-const callApi = async () => {
-  const data = await fetch("https://dummyjson.com/products");
-  const json = await data.json();
-  console.log(json);
-};
+// const callApi = async () => {
+//   const data = await fetch("https://dummyjson.com/products");
+//   const json = await data.json();
+//   console.log(json);
+// };
 
-callApi();
+// callApi();
 
-let arr = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
-let arr2 = [...arr];
+// let arr2 = [...arr];
 
-console.log(arr2);
-
-// Trial
+// console.log(arr2);
