@@ -1,37 +1,11 @@
-function x() {
-  var a = 10;
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-  function y() {
-    console.log(a);
-  }
-  y();
-}
+// for (arr of array) {
+//   var a = (arr += arr);
+//   console.log(a);
+// }
 
-x();
-
-function a() {
-  console.log("a");
-}
-a();
-
-console.log("end");
-
-const promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let number = 1;
-
-    if (number >= 10) {
-      resolve("This was resolved");
-    } else {
-      reject("This was rejected");
-    }
-  }, 1000);
+const b = array.reduce((x, y) => {
+  return x + y;
 });
-
-promise
-  .then(result => {
-    console.log(result);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+console.log(b);
