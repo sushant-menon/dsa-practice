@@ -9,3 +9,5 @@ const b = array.reduce((x, y) => {
   return x + y;
 });
 console.log(b);
+
+//dsa
